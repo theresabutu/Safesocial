@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeSocial - Hackathon Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Reset & Base */
+body, html{margin:0;padding:0;font-family:'Roboto', sans-serif;background:#f5f7fb;color:#333;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+header, section, footer{padding:60px 20px}
+header{background:linear-gradient(135deg,#4a6cf7,#1f2a44);color:white;text-align:center;position:relative}
+header h1{font-size:3rem;margin-bottom:10px}
+header p{font-size:1.2rem;margin-bottom:20px}
+.btn{background:#ff6b6b;color:white;padding:12px 25px;border-radius:6px;font-weight:bold;transition:0.3s}
+.btn:hover{background:#ff4757}
+nav{background:#1f2a44;padding:15px;text-align:center;position:sticky;top:0;z-index:100}
+nav a{color:white;margin:0 15px;font-weight:bold;transition:0.3s}
+nav a:hover{color:#ff6b6b}
+section{max-width:1100px;margin:auto}
+h2{color:#4a6cf7;margin-bottom:20px;text-align:center}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);transition:0.3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(0,0,0,0.15)}
+footer{background:#1f2a44;color:white;text-align:center}
+/* Carousel */
+.carousel{display:flex;overflow-x:auto;gap:20px;padding:20px 0}
+.carousel::-webkit-scrollbar{display:none}
+.carousel img{border-radius:10px;min-width:300px;max-width:100%;height:auto;box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+/* Chatbot */
+#chatbot{position:fixed;bottom:30px;right:30px;width:300px;background:white;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);overflow:hidden}
+#chatbot-header{background:#4a6cf7;color:white;padding:15px;font-weight:bold;text-align:center}
+#chatbot-messages{padding:10px;height:200px;overflow-y:auto}
+#chatbot-input{display:flex;border-top:1px solid #ddd}
+#chatbot-input input{flex:1;padding:10px;border:none}
+#chatbot-input button{padding:10px;background:#4a6cf7;color:white;border:none;cursor:pointer}
+/* Parent Dashboard */
+#dashboard{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);margin-top:20px}
+#dashboard h3{margin-top:0}
+.alert{background:#ff6b6b;color:white;padding:10px;border-radius:6px;margin:10px 0}
+</style>
+</head>
+<body>
+
+<header>
+<h1>SafeSocial</h1>
+<p>Protecting Teens from Cyberbullying, Online Predators, and Digital Risks</p>
+<a class="btn" href="#solution">Explore Features</a>
+</header>
+
+<nav>
+<a href="#overview">Overview</a>
+<a href="#users">Target Users</a>
+<a href="#solution">Features</a>
+<a href="#technology">Technology</a>
+<a href="#ai">AI Component</a>
+<a href="#dashboard-section">Parent Dashboard</a>
+</nav>
+
+<section id="overview">
+<h2>Project Overview</h2>
+<p>SafeSocial is a digital safety platform designed to protect teenagers from online threats such as cyberbullying, harassment, and interactions with online predators. The platform monitors social media interactions and alerts users when harmful behavior is detected while educating teens about safe online practices.</p>
+</section>
+
+<section id="users">
+<h2>Target Users</h2>
+<ul>
+<li>Teenagers aged 13-19 who actively use social media</li>
+<li>Parents and guardians who want to ensure their children's online safety</li>
+<li>Schools and counselors supporting student wellbeing</li>
+<li>Youth organizations promoting digital responsibility</li>
+</ul>
+</section>
+
+<section id="solution">
+<h2>Key Features</h2>
+<div class="features">
+<div class="card"><h3>Cyberbullying Detection</h3><p>AI detects abusive language and alerts users when harmful communication occurs.</p></div>
+<div class="card"><h3>Predator Detection</h3><p>Identifies suspicious behavior patterns and warns users about unsafe interactions.</p></div>
+<div class="card"><h3>Panic Button</h3><p>Quickly report harassment, block users, and save evidence of harmful interactions.</p></div>
+<div class="card"><h3>Privacy Alerts</h3><p>Warns teens before they share sensitive personal information online.</p></div>
+<div class="card"><h3>Safety Education</h3><p>Interactive lessons and tips that teach teens responsible social media behavior.</p></div>
+</div>
+
+<h2>Product Mockups</h2>
+<div class="carousel">
+<img src="https://via.placeholder.com/300x500.png?text=Teen+Interface" alt="Teen Interface">
+<img src="https://via.placeholder.com/300x500.png?text=Parent+Dashboard" alt="Parent Dashboard">
+<img src="https://via.placeholder.com/300x500.png?text=Safety+Alerts" alt="Safety Alerts">
+<img src="https://via.placeholder.com/300x500.png?text=Learning+Modules" alt="Learning Modules">
+</div>
+</section>
+
+<section id="technology">
+<h2>Technology Used</h2>
+<ul>
+<li>Frontend: HTML, CSS, JavaScript, React</li>
+<li>Backend: Node.js or Python</li>
+<li>Database: MongoDB / PostgreSQL</li>
+<li>Security: Data encryption and secure authentication</li>
+<li>Integration with social media APIs</li>
+</ul>
+</section>
+
+<section id="ai">
+<h2>AI Component</h2>
+<p>SafeSocial uses Artificial Intelligence and Natural Language Processing (NLP) to analyze messages and comments. The AI detects cyberbullying, harassment, and suspicious patterns that may indicate grooming or predatory behavior. When risks are detected, the system sends alerts and suggests actions such as blocking or reporting users.</p>
+</section>
+
+<section id="dashboard-section">
+<h2>Parent Dashboard Demo</h2>
+<div id="dashboard">
+<h3>Recent Alerts</h3>
+<div class="alert">Cyberbullying detected in chat from @user123</div>
+<div class="alert">Suspicious interaction with unknown adult</div>
+<div class="alert">Teen attempted to share location info</div>
+</div>
+</section>
+
+<!-- Chatbot -->
+<div id="chatbot">
+<div id="chatbot-header">SafeSocial Tips</div>
+<div id="chatbot-messages">Welcome! Ask me how to stay safe online.</div>
+<div id="chatbot-input">
+<input type="text" id="user-input" placeholder="Type a question...">
+<button onclick="sendMessage()">Send</button>
+</div>
+</div>
+
+<footer>
+<p>SafeSocial Hackathon Prototype | Digital Safety Innovation</p>
+</footer>
+
+<script>
+// Simple demo chatbot
+function sendMessage(){
+  const input = document.getElementById('user-input');
+  const messages = document.getElementById('chatbot-messages');
+  let response = '';
+  const text = input.value.toLowerCase();
+  if(text.includes('report')) response='Use the panic button to report harassment instantly.';
+  else if(text.includes('privacy')) response='Avoid sharing personal information like phone or address online.';
+  else if(text.includes('bullying')) response='Block the user and report the content to the platform.';
+  else response='Stay aware of suspicious interactions and ask a trusted adult for help.';
+  messages.innerHTML += '<p><b>You:</b> '+input.value+'</p><p><b>Bot:</b> '+response+'</p>';
+  messages.scrollTop = messages.scrollHeight;
+  input.value='';
+}
+</script>
+
+</body>
+</html>
